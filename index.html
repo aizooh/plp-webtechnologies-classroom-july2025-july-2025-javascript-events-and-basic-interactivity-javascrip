@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Pages with JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+
+    <header>
+        <h1>Interactive Web Features</h1>
+        <button id="mode-toggle">Toggle Dark Mode</button>
+    </header>
+
+    <main>
+        
+        <section class="interactive-section">
+            <h2>Interactive Counter 🎮</h2>
+            <p>Demonstrates event listeners on multiple buttons and state management.</p>
+            <div class="counter-container">
+                <button id="decrement-btn">- Decrement</button>
+                <span id="counter-display" class="count">0</span>
+                <button id="increment-btn">+ Increment</button>
+            </div>
+            <p id="counter-feedback"></p>
+        </section>
+
+        <section class="interactive-section">
+            <h2>Collapsible FAQ Section</h2>
+            <div class="faq-item">
+                <h3 class="faq-header" id="faq-q1">How does Flexbox work?</h3>
+                <div class="faq-content">
+                    <p>Flexbox is a one-dimensional layout method for arranging items in rows or columns. It governs the distribution of space among items in a container when dealing with varying sizes, often used for navigation bars or card layouts.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-header" id="faq-q2">What is the DOM?</h3>
+                <div class="faq-content">
+                    <p>The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. JavaScript is the primary language used to manipulate the DOM.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="interactive-section">
+            <h2>Part 3: Custom Form Validation ✅</h2>
+            <form id="registration-form" novalidate>
+                <p>All fields are required and validated using custom JavaScript logic.</p>
+
+                <div class="form-group">
+                    <label for="reg-name">Name (Min 3 chars):</label>
+                    <input type="text" id="reg-name" name="name" required>
+                    <span class="error-message" id="name-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-email">Email:</label>
+                    <input type="email" id="reg-email" name="email" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="reg-password">Password (Min 8 chars, 1 number):</label>
+                    <input type="password" id="reg-password" name="password" required>
+                    <span class="error-message" id="password-error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg-agree">Agree to Terms:</label>
+                    <input type="checkbox" id="reg-agree" name="agree" required>
+                    <span class="error-message" id="agree-error"></span>
+                </div>
+
+                <button type="submit" id="submit-btn">Register</button>
+                <p id="form-feedback" class="feedback-message"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>JavaScript interactivity assignment.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

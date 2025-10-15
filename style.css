@@ -1,0 +1,141 @@
+:root {
+    --bg-light: #f4f4f9;
+    --text-light: #333;
+    --bg-dark: #2c3e50;
+    --text-dark: #ecf0f1;
+    --primary-color: #007bff;
+    --error-color: #dc3545;
+}
+
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Light Mode (Default) */
+.light-mode {
+    background-color: var(--bg-light);
+    color: var(--text-light);
+}
+.light-mode header, .light-mode footer {
+    background: var(--primary-color);
+    color: white;
+}
+.light-mode .interactive-section {
+    background: white;
+    border: 1px solid #ddd;
+}
+.light-mode input:focus {
+    border-color: var(--primary-color);
+}
+
+
+/* Dark Mode (Toggled via JS) */
+.dark-mode {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+}
+.dark-mode header, .dark-mode footer {
+    background: #34495e;
+    color: #f8f8f8;
+}
+.dark-mode .interactive-section {
+    background: #34495e;
+    border: 1px solid #555;
+}
+.dark-mode input {
+    background-color: #4a637d;
+    color: var(--text-dark);
+}
+
+/* Section Styling */
+.interactive-section {
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.error-message {
+    color: var(--error-color);
+    font-size: 0.9em;
+    display: block; /* Ensures error messages take up space */
+    height: 1.2em; /* Reserve space to prevent layout jump */
+}
+.feedback-message {
+    padding: 10px;
+    margin-top: 15px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.feedback-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+.feedback-error {
+    background-color: #f8d7da;
+    color: var(--error-color);
+}
+
+/* Counter Styles */
+.counter-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+.count {
+    font-size: 2em;
+    min-width: 50px;
+    text-align: center;
+}
+
+/* Collapsible FAQ Styles */
+.faq-header {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 5px;
+    border-left: 5px solid var(--primary-color);
+}
+.faq-content {
+    /* Initially hidden via CSS */
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 10px;
+    transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+}
+.faq-content.open {
+    /* Class toggled by JS to show content */
+    max-height: 200px; /* Needs to be larger than content height */
+    padding: 10px;
+    border: 1px solid #eee;
+    border-top: none;
+}
